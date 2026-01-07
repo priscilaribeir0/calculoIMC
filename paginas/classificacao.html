@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - Classificação</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        .classification-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 40px 0;
+        }
+        
+        .classification-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .classification-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .classification-table th {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        
+        .classification-table td {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .classification-table tr:hover {
+            background-color: #f8fafc;
+        }
+        
+        .classification-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .risk-level {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .risk-low { background-color: #d5f4e6; color: #27ae60; }
+        .risk-moderate { background-color: #fff3cd; color: #856404; }
+        .risk-high { background-color: #f8d7da; color: #721c24; }
+        .risk-very-high { background-color: #f5c6cb; color: #491217; }
+        
+        .visual-guide {
+            display: flex;
+            height: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 40px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guide-segment {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .comparison-card {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .comparison-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .comparison-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .who-standards {
+            background-color: #e8f4fc;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border: 2px solid #3498db;
+        }
+        
+        .who-standards h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .note-box {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #f1c40f;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-table"></i> Classificação do IMC</h1>
+            <p class="subtitle">Entenda as faixas do Índice de Massa Corporal</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="/paginas/calculadora.html"><i class="fas fa-calculator"></i> Calculadora</a></li>
+                <li><a href="/paginas/informacoes.html"><i class="fas fa-info-circle"></i> O que é IMC?</a></li>
+                <li><a href="/paginas/classificacao.html" class="active"><i class="fas fa-table"></i> Classificação</a></li>
+                <li><a href="/paginas/sobre.html"><i class="fas fa-user-md"></i> Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="classification-container">
+            <div class="classification-header">
+                <h2>Tabela de Classificação do IMC</h2>
+                <p>Segundo padrões da Organização Mundial da Saúde (OMS)</p>
+            </div>
+            
+            <div class="visual-guide">
+                <div class="guide-segment" style="background-color: #3498db;">&lt; 18.5</div>
+                <div class="guide-segment" style="background-color: #2ecc71;">18.5 - 24.9</div>
+                <div class="guide-segment" style="background-color: #f1c40f;">25 - 29.9</div>
+                <div class="guide-segment" style="background-color: #e67e22;">30 - 34.9</div>
+                <div class="guide-segment" style="background-color: #e74c3c;">35 - 39.9</div>
+                <div class="guide-segment" style="background-color: #c0392b;">≥ 40</div>
+            </div>
+            
+            <table class="classification-table">
+                <thead>
+                    <tr>
+                        <th>Classificação</th>
+                        <th>IMC (kg/m²)</th>
+                        <th>Risco para Saúde</th>
+                        <th>Recomendações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="classification-color" style="background-color: #3498db;"></span>
+                            <strong>Abaixo do peso</strong>
+                        </td>
+                        <td>18.5</td>
+                        <td><span class="risk-level risk-moderate">Moderado</span></td>
+                        <td>Buscar orientação nutricional para ganho de peso saudável</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="classification-color" style="background-color: #2ecc71;"></span>
+                            <strong>Peso normal</strong>
+                        </td>
+                        <td>18.5 - 24.9</td>
+                        <td><span class="risk-level risk-low">Baixo</span></td>
+                        <td>Manter hábitos saudáveis de alimentação e exercícios</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="classification-color" style="background-color: #f1c40f;"></span>
+                            <strong>Sobrepeso</strong>
+                        </td>
+                        <td>25 - 29.9</td>
+                        <td><span class="risk-level risk-moderate">Moderado</span></td>
+                        <td>Ajustar alimentação e aumentar atividade física</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="classification-color" style="background-color: #e67e22;"></span>
+                            <strong>Obesidade Grau I</strong>
+                        </td>
+                        <td>30 - 34.9</td>
+                        <td><span class="risk-level risk-high">Alto</span></td>
+                        <td>Acompanhamento médico e nutricional recomendado</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="classification-color" style="background-color: #e74c3c;"></span>
+                            <strong>Obesidade Grau II</strong>
+                        </td>
+                        <td>35 - 39.9</td>
+                        <td><span class="risk-level risk-high">Alto</span></td>
+                        <td>Buscar orientação profissional para plano de saúde</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="classification-color" style="background-color: #c0392b;"></span>
+                            <strong>Obesidade Grau III</strong>
+                        </td>
+                        <td>≥ 40</td>
+                        <td><span class="risk-level risk-very-high">Muito Alto</span></td>
+                        <td>Acompanhamento médico especializado necessário</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="who-standards">
+                <h3><i class="fas fa-globe-americas"></i> Padrões da Organização Mundial da Saúde</h3>
+                <p>A classificação acima segue os padrões estabelecidos pela Organização Mundial da Saúde (OMS), que são internacionalmente reconhecidos. Estes valores são baseados em estudos populacionais que correlacionam o IMC com a morbidade e mortalidade por diversas causas.</p>
+                <p>Para populações asiáticas, a OMS recomenda pontos de corte ligeiramente diferentes, reconhecendo diferenças na composição corporal.</p>
+            </div>
+            
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3><i class="fas fa-child"></i> IMC em Crianças e Adolescentes</h3>
+                    <p>Para menores de 19 anos, o IMC é interpretado de forma diferente, utilizando gráficos de percentis específicos para idade e sexo.</p>
+                    <p>O cálculo é o mesmo, mas a interpretação considera o crescimento e desenvolvimento normais.</p>
+                    <ul style="margin-top: 15px;">
+                        <li>Abaixo do peso: < 5º percentil</li>
+                        <li>Peso saudável: 5º - 85º percentil</li>
+                        <li>Sobrepeso: 85º - 95º percentil</li>
+                        <li>Obesidade: ≥ 95º percentil</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3><i class="fas fa-user-friends"></i> IMC em Idosos</h3>
+                    <p>Para pessoas com mais de 65 anos, a faixa de IMC considerado saudável pode ser ligeiramente maior.</p>
+                    <p>Estudos sugerem que um IMC entre 23 e 30 pode ser mais adequado para idosos, considerando a perda muscular natural do envelhecimento.</p>
+                    <p>É importante considerar outros fatores como mobilidade, força muscular e saúde geral.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3><i class="fas fa-dumbbell"></i> IMC em Atletas</h3>
+                    <p>Atletas e pessoas muito musculosas podem ter IMC elevado sem apresentar excesso de gordura corporal.</p>
+                    <p>Nestes casos, outras medidas como percentual de gordura corporal, circunferência da cintura e avaliação física são mais indicadas.</p>
+                    <p>O IMC não distingue entre massa muscular e massa gorda.</p>
+                </div>
+            </div>
+            
+            <div class="note-box">
+                <h4><i class="fas fa-exclamation-circle"></i> Nota Importante</h4>
+                <p>Esta classificação é uma <strong>referência geral</strong>. O IMC é uma ferramenta de triagem, não um diagnóstico médico completo. Resultados individuais devem ser interpretados por profissionais de saúde que consideram outros fatores como composição corporal, distribuição de gordura, massa muscular, idade, sexo, etnia e histórico de saúde.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/paginas/calculadora.html" class="btn btn-primary">
+                    <i class="fas fa-calculator"></i> Calcular meu IMC
+                </a>
+                <a href="/paginas/informacoes.html" class="btn btn-secondary" style="margin-left: 15px;">
+                    <i class="fas fa-book"></i> Saiba mais sobre o IMC
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Calculadora de IMC. Este site é apenas para fins informativos. Consulte um profissional de saúde.</p>
+            <div class="footer-links">
+                <a href="/paginas/sobre.html">Sobre o Projeto</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

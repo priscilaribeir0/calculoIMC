@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - O que é IMC?</title>
+    <link rel="stylesheet" href="/estilo/style.css">
+    <style>
+        /* Estilos específicos para esta página */
+        .info-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 40px 0;
+        }
+        
+        .info-section {
+            margin-bottom: 40px;
+        }
+        
+        .info-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .info-card {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .info-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-card h3 i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        
+        .limitations-list {
+            list-style-type: none;
+        }
+        
+        .limitations-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .limitations-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .limitations-list i {
+            color: #e74c3c;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .benefit-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid #2ecc71;
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: #2ecc71;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background-color: #e8f4fc;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #3498db;
+        }
+        
+        .highlight-box h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-info-circle"></i> O que é IMC?</h1>
+            <p class="subtitle">Entenda o Índice de Massa Corporal e sua importância</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="/paginas/calculadora.html"><i class="fas fa-calculator"></i> Calculadora</a></li>
+                <li><a href="/paginas/informacoes.html" class="active"><i class="fas fa-info-circle"></i> O que é IMC?</a></li>
+                <li><a href="/paginas/classificacao.html"><i class="fas fa-table"></i> Classificação</a></li>
+                <li><a href="/paginas/sobre.html"><i class="fas fa-user-md"></i> Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="info-container">
+            <div class="info-section">
+                <h2>O que é o Índice de Massa Corporal (IMC)?</h2>
+                <div class="info-card">
+                    <h3><i class="fas fa-question-circle"></i> Definição</h3>
+                    <p>O Índice de Massa Corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal. Desenvolvido pelo estatístico belga Adolphe Quetelet no século XIX, o IMC é amplamente utilizado por profissionais de saúde como uma ferramenta de triagem para identificar possíveis problemas de peso.</p>
+                    <p>O cálculo é feito dividindo o peso (em quilogramas) pela altura ao quadrado (em metros). A fórmula é simples, mas fornece uma indicação valiosa sobre o estado nutricional de uma pessoa.</p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>Por que o IMC é importante?</h2>
+                <div class="info-card">
+                    <h3><i class="fas fa-heart"></i> Importância para a saúde</h3>
+                    <p>Manter um IMC dentro da faixa saudável é importante porque:</p>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h4>Saúde Cardiovascular</h4>
+                            <p>Reduz o risco de doenças cardíacas e pressão arterial alta</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <h4>Prevenção de Diabetes</h4>
+                            <p>Diminui o risco de desenvolver diabetes tipo 2</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-lungs"></i>
+                            </div>
+                            <h4>Saúde Respiratória</h4>
+                            <p>Melhora a função pulmonar e reduz problemas respiratórios</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>Saúde Mental</h4>
+                            <p>Contribui para o bem-estar psicológico e autoestima</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>Limitações do IMC</h2>
+                <div class="info-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> O que o IMC não considera</h3>
+                    <p>Embora seja uma ferramenta útil, o IMC tem algumas limitações importantes:</p>
+                    <ul class="limitations-list">
+                        <li>
+                            <i class="fas fa-dumbbell"></i>
+                            <div>
+                                <strong>Composição corporal:</strong> Não distingue entre massa muscular e massa gorda. Atletas podem ter IMC elevado devido à massa muscular, não à gordura.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-user-injured"></i>
+                            <div>
+                                <strong>Distribuição de gordura:</strong> Não considera onde a gordura está localizada no corpo (gordura abdominal é mais perigosa).
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-baby"></i>
+                            <div>
+                                <strong>Diferenças étnicas e de idade:</strong> Os pontos de corte podem não ser adequados para todas as populações.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-female"></i>
+                            <div>
+                                <strong>Diferenças de gênero:</strong> Homens e mulheres têm diferentes composições corporais.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-balance-scale"></i>
+                            <div>
+                                <strong>Densidade óssea:</strong> Pessoas com ossos mais densos podem ter IMC mais alto.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>Como interpretar seu IMC</h2>
+                <div class="info-card">
+                    <h3><i class="fas fa-search"></i> Interpretação correta</h3>
+                    <p>O resultado do IMC deve ser interpretado da seguinte forma:</p>
+                    
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-lightbulb"></i> Importante!</h3>
+                        <p>O IMC é uma <strong>ferramenta de triagem</strong>, não um diagnóstico. Um resultado fora da faixa normal não significa necessariamente que você tenha um problema de saúde, mas indica que seria bom conversar com um profissional de saúde.</p>
+                        <p>Para uma avaliação completa da sua saúde, é necessário considerar outros fatores como:</p>
+                        <ul style="margin-top: 15px;">
+                            <li>Circunferência da cintura</li>
+                            <li>Pressão arterial</li>
+                            <li>Níveis de colesterol e glicose</li>
+                            <li>Histórico familiar</li>
+                            <li>Hábitos de vida (alimentação, exercícios, sono)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>História do IMC</h2>
+                <div class="info-card">
+                    <h3><i class="fas fa-history"></i> Origens e evolução</h3>
+                    <p>O IMC foi desenvolvido entre 1830 e 1850 pelo matemático, astrônomo e estatístico belga <strong>Lambert Adolphe Jacques Quetelet</strong>. Inicialmente chamado de "Índice de Quetelet", foi criado como parte de seus estudos sobre "homem médio" e crescimento humano.</p>
+                    <p>O índice ganhou popularidade na década de 1970, quando o pesquisador Ancel Keys o renomeou como "Índice de Massa Corporal" em um estudo sobre obesidade. Desde então, tornou-se a ferramenta padrão para classificação de peso em todo o mundo.</p>
+                    <p>Em 1997, a Organização Mundial da Saúde (OMS) adotou oficialmente o IMC como padrão internacional para avaliar riscos associados ao sobrepeso e obesidade.</p>
+                </div>
+            </div>
+
+            <div class="formula-box" style="text-align: center; margin-top: 40px;">
+                <h3>Fórmula do IMC</h3>
+                <p class="formula">IMC = Peso (kg) ÷ [Altura (m) × Altura (m)]</p>
+                <p>Exemplo: 70 kg ÷ (1.75 m × 1.75 m) = 22.86 kg/m²</p>
+                <a href="/paginas/calculadora.html" class="btn btn-primary" style="margin-top: 20px;">
+                    <i class="fas fa-calculator"></i> Calcular meu IMC agora
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Calculadora de IMC. Este site é apenas para fins informativos. Consulte um profissional de saúde.</p>
+            <div class="footer-links">
+                <a href="/paginas/sobre.html">Sobre o Projeto</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

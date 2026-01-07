@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - Sobre</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <style>
+        .about-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 40px 0;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .about-section {
+            margin-bottom: 40px;
+        }
+        
+        .about-section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .team-card {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .disclaimer-box {
+            background-color: #fff3cd;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 5px solid #f1c40f;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            background-color: #e8f4fc;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .contact-info {
+            background-color: #f8fafc;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .contact-info ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .contact-info li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info li:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-info i {
+            color: #3498db;
+            margin-right: 15px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-user-md"></i> Sobre o Projeto</h1>
+            <p class="subtitle">Conheça mais sobre nossa calculadora de IMC</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="/paginas/calculadora.html"><i class="fas fa-calculator"></i> Calculadora</a></li>
+                <li><a href="/paginas/informacoes.html"><i class="fas fa-info-circle"></i> O que é IMC?</a></li>
+                <li><a href="/paginas/classificacao.html"><i class="fas fa-table"></i> Classificação</a></li>
+                <li><a href="/paginas/sobre.html" class="active"><i class="fas fa-user-md"></i> Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="about-container">
+            <div class="about-header">
+                <h2>Sobre a Calculadora de IMC</h2>
+                <p>Uma ferramenta desenvolvida para promover a conscientização sobre saúde e bem-estar</p>
+            </div>
+            
+            <div class="about-section">
+                <h2><i class="fas fa-bullseye"></i> Nossa Missão</h2>
+                <p>Nosso objetivo é fornecer uma ferramenta acessível e fácil de usar para que qualquer pessoa possa calcular seu Índice de Massa Corporal (IMC) e entender melhor sua saúde. Acreditamos que informação é o primeiro passo para hábitos mais saudáveis.</p>
+                <p>Queremos democratizar o acesso a informações básicas de saúde, ajudando as pessoas a monitorarem seu peso de forma consciente e responsável.</p>
+            </div>
+            
+            <div class="about-section">
+                <h2><i class="fas fa-history"></i> Como Surgiu Este Projeto</h2>
+                <p>Este projeto foi desenvolvido como uma iniciativa educacional para demonstrar o uso de tecnologias web (HTML, CSS e JavaScript) na criação de ferramentas úteis para o dia a dia.</p>
+                <p>Percebemos que muitas pessoas têm dúvidas sobre seu peso ideal, mas nem sempre têm acesso fácil a informações confiáveis. Decidimos então criar uma calculadora online que fosse:</p>
+                <ul style="margin: 20px 0 20px 30px;">
+                    <li>Totalmente gratuita</li>
+                    <li>Fácil de usar</li>
+                    <li>Baseada em padrões científicos</li>
+                    <li>Acessível em qualquer dispositivo</li>
+                    <li>Com informações educativas</li>
+                </ul>
+            </div>
+            
+            <div class="about-section">
+                <h2><i class="fas fa-laptop-code"></i> Tecnologias Utilizadas</h2>
+                <p>Este projeto foi desenvolvido utilizando apenas tecnologias front-end padrão da web:</p>
+                <div class="tech-stack">
+                    <div class="tech-item">HTML5</div>
+                    <div class="tech-item">CSS3</div>
+                    <div class="tech-item">JavaScript (ES6+)</div>
+                    <div class="tech-item">Font Awesome Icons</div>
+                    <div class="tech-item">Google Fonts</div>
+                    <div class="tech-item">Design Responsivo</div>
+                </div>
+                <p style="margin-top: 20px;">O código foi estruturado de forma modular para facilitar a manutenção e expansão do projeto. Todas as páginas são estáticas e não requerem backend, podendo ser hospedadas em qualquer servidor web simples.</p>
+            </div>
+            
+            <div class="disclaimer-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Aviso Importante</h3>
+                <p>Esta calculadora de IMC é uma <strong>ferramenta informativa e educacional</strong>. Os resultados fornecidos são baseados na fórmula padrão do IMC e nas classificações da Organização Mundial da Saúde.</p>
+                <p><strong>Este site não substitui a consulta com um profissional de saúde.</strong> O IMC é apenas um dos muitos indicadores de saúde e deve ser interpretado por um médico ou nutricionista qualificado, que considerará outros fatores como composição corporal, histórico médico, idade, sexo e estilo de vida.</p>
+                <p>Se você tem preocupações sobre seu peso ou saúde, consulte um profissional de saúde qualificado.</p>
+            </div>
+            
+            <div class="about-section">
+                <h2><i class="fas fa-heartbeat"></i> Compromisso com a Saúde</h2>
+                <p>Acreditamos que ferramentas como esta podem ajudar as pessoas a:</p>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Conscientizar</h3>
+                        <p>Entender melhor a relação entre peso e saúde</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Monitorar</h3>
+                        <p>Acompanhar mudanças no peso ao longo do tempo</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Motivar</h3>
+                        <p>Tomar decisões mais informadas sobre saúde</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h2><i class="fas fa-envelope"></i> Contato e Sugestões</h2>
+                <p>Tem sugestões para melhorar nossa calculadora? Encontrou algum problema ou tem dúvidas?</p>
+                <ul>
+                    <li>
+                        <i class="fas fa-code"></i>
+                        <div>
+                            <strong>Relatar problemas técnicos:</strong> Verifique nosso repositório no GitHub
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-comments"></i>
+                        <div>
+                            <strong>Sugestões de melhoria:</strong> Envie um email para suporte@calculadoraimc.com
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-question-circle"></i>
+                        <div>
+                            <strong>Dúvidas sobre saúde:</strong> Consulte um profissional de saúde qualificado
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-home"></i> Voltar para a Página Inicial
+                </a>
+                <a href="/paginas/calculadora.html" class="btn btn-secondary" style="margin-left: 15px;">
+                    <i class="fas fa-calculator"></i> Usar a Calculadora
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Calculadora de IMC. Este site é apenas para fins informativos. Consulte um profissional de saúde.</p>
+            <div class="footer-links">
+                <a href="/paginas/sobre.html">Sobre o Projeto</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>

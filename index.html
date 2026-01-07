@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - Página Principal</title>
+    <link rel="stylesheet" href="estilo/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heartbeat"></i> Calculadora de IMC</h1>
+            <p class="subtitle">Controle sua saúde de forma simples e eficiente</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="./paginas/calculadora.html"><i class="fas fa-calculator"></i> Calculadora</a></li>
+                <li><a href="./paginas/informacoes.html"><i class="fas fa-info-circle"></i> O que é IMC?</a></li>
+                <li><a href="./paginas/classificacao.html"><i class="fas fa-table"></i> Classificação</a></li>
+                <li><a href="./paginas/sobre.html"><i class="fas fa-user-md"></i> Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Calcule seu Índice de Massa Corporal</h2>
+                <p>Descubra se seu peso está adequado para sua altura de forma rápida e gratuita.</p>
+                <a href="./paginas/calculadora.html" class="btn btn-primary">
+                    <i class="fas fa-calculator"></i> Calcular Agora
+                </a>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-weight-scale" style="font-size: 6rem; color: #3498db;"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title">Por que calcular seu IMC?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Saúde Cardiovascular</h3>
+                    <p>Manter um IMC adequado reduz o risco de doenças cardíacas e pressão alta.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Controle Pessoal</h3>
+                    <p>Acompanhe sua evolução e mantenha o controle sobre sua saúde.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Orientação Nutricional</h3>
+                    <p>Entenda melhor suas necessidades nutricionais baseadas no seu IMC.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-calculator">
+            <h2 class="section-title">Calculadora Rápida</h2>
+            <div class="calculator-preview">
+                <div class="form-group">
+                    <label for="quick-weight">Peso (kg)</label>
+                    <input type="number" id="quick-weight" placeholder="Ex: 70" min="1" max="300">
+                </div>
+                <div class="form-group">
+                    <label for="quick-height">Altura (m)</label>
+                    <input type="number" id="quick-height" placeholder="Ex: 1.75" min="0.5" max="2.5" step="0.01">
+                </div>
+                <button id="quick-calculate" class="btn btn-secondary">
+                    <i class="fas fa-bolt"></i> Calcular Rápido
+                </button>
+                <div class="quick-result" id="quick-result">
+                    <!-- Resultado será mostrado aqui -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Calculadora de IMC. Este site é apenas para fins informativos. Consulte um profissional de saúde.</p>
+            <div class="footer-links">
+                <a href="./paginas/sobre.html">Sobre o Projeto</a> | 
+                <a href="#">Política de Privacidade</a> | 
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - Calculadora</title>
+    <link rel="stylesheet" href="../estilo/style.css">
+    <link rel="stylesheet" href="../estilo/calculadora.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-calculator"></i> Calculadora de IMC</h1>
+            <p class="subtitle">Calcule seu Índice de Massa Corporal com precisão</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="../paginas/calculadora.html" class="active"><i class="fas fa-calculator"></i> Calculadora</a></li>
+                <li><a href="../paginas/informacoes.html"><i class="fas fa-info-circle"></i> O que é IMC?</a></li>
+                <li><a href="../paginas/classificacao.html"><i class="fas fa-table"></i> Classificação</a></li>
+                <li><a href="../paginas/sobre.html"><i class="fas fa-user-md"></i> Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Calculadora Completa de IMC</h2>
+            <p>Preencha os dados abaixo para calcular seu Índice de Massa Corporal</p>
+        </div>
+
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <div class="input-section">
+                    <div class="form-group">
+                        <label for="weight">
+                            <i class="fas fa-weight"></i> Peso (kg)
+                        </label>
+                        <input type="number" id="weight" placeholder="Digite seu peso em quilogramas" step="0.1" min="1"
+                            max="300">
+                        <div class="input-hint">Exemplo: 70.5</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="height">
+                            <i class="fas fa-ruler-vertical"></i> Altura (m)
+                        </label>
+                        <input type="number" id="height" placeholder="Digite sua altura em metros" step="0.01" min="0.5"
+                            max="2.5">
+                        <div class="input-hint">Exemplo: 1.75</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">
+                            <i class="fas fa-birthday-cake"></i> Idade (opcional)
+                        </label>
+                        <input type="number" id="age" placeholder="Digite sua idade" min="1" max="120">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gênero (opcional)</label>
+                        <div class="gender-options">
+                            <label class="radio-option">
+                                <input type="radio" name="gender" value="male">
+                                <span class="radio-custom"></span>
+                                Masculino
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="gender" value="female">
+                                <span class="radio-custom"></span>
+                                Feminino
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button id="calculate-btn" class="btn btn-primary btn-large">
+                            <i class="fas fa-calculator"></i> Calcular IMC
+                        </button>
+                        <button id="reset-btn" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Limpar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="result-section" id="result-section">
+                    <h3><i class="fas fa-clipboard-check"></i> Seu Resultado</h3>
+
+                    <div class="result-card">
+                        <div class="result-value">
+                            <span class="value" id="imc-value">--</span>
+                            <span class="unit">kg/m²</span>
+                        </div>
+                        <div class="result-label" id="imc-label">Preencha os dados</div>
+                    </div>
+
+                    <div class="classification-bar">
+                        <div class="bar-segment" style="background-color: #3498db; width: 15%;" title="Abaixo do peso">
+                        </div>
+                        <div class="bar-segment" style="background-color: #2ecc71; width: 25%;" title="Peso normal">
+                        </div>
+                        <div class="bar-segment" style="background-color: #f1c40f; width: 20%;" title="Sobrepeso"></div>
+                        <div class="bar-segment" style="background-color: #e67e22; width: 15%;"
+                            title="Obesidade Grau I"></div>
+                        <div class="bar-segment" style="background-color: #e74c3c; width: 15%;"
+                            title="Obesidade Grau II"></div>
+                        <div class="bar-segment" style="background-color: #c0392b; width: 10%;"
+                            title="Obesidade Grau III"></div>
+                    </div>
+
+                    <div class="result-message" id="result-message">
+                        <p>Para ver seu resultado, preencha os dados de peso e altura e clique em "Calcular IMC".</p>
+                    </div>
+
+                    <div class="result-details" id="result-details">
+                        <!-- Detalhes serão inseridos aqui pelo JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator-info">
+                <h3><i class="fas fa-lightbulb"></i> Dicas Importantes</h3>
+                <ul class="tips-list">
+                    <li><i class="fas fa-check-circle"></i> Meça seu peso com roupas leves e sem sapatos</li>
+                    <li><i class="fas fa-check-circle"></i> Use uma fita métrica para medir sua altura com precisão</li>
+                    <li><i class="fas fa-check-circle"></i> O IMC é uma referência, não um diagnóstico médico</li>
+                    <li><i class="fas fa-check-circle"></i> Atletas podem ter IMC elevado devido à massa muscular</li>
+                    <li><i class="fas fa-check-circle"></i> Consulte um profissional de saúde para avaliação completa
+                    </li>
+                </ul>
+
+                <div class="formula-box">
+                    <h4>Fórmula do IMC</h4>
+                    <p class="formula">IMC = Peso (kg) ÷ [Altura (m) × Altura (m)]</p>
+                    <p>Exemplo: 70 kg ÷ (1.75 m × 1.75 m) = 22.86 kg/m²</p>
+                </div>
+
+                <div class="navigation-box">
+                    <p>Quer entender melhor seu resultado?</p>
+                    <a href="../paginas/classificacao.html" class="btn btn-secondary btn-small">
+                        <i class="fas fa-table"></i> Ver Classificação Completa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Calculadora de IMC. Este site é apenas para fins informativos. Consulte um profissional de
+                saúde.</p>
+            <div class="footer-links">
+                <a href="../paginas/sobre.html">Sobre o Projeto</a> |
+                <a href="#">Política de Privacidade</a> |
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javascript/calculadora.js"></script>
+</body>
+
+</html>
